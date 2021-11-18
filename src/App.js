@@ -1,29 +1,37 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
-ReactDOM.render(
-  <Router>
-    <Routes>
-      <Route path="/Header" element={<Header />} />
-      <Route path="/Home" element={<Home />} />
-    </Routes>
-  </Router>,
-  document.getElementById("root")
-);
+import Checkout from "./Checkout";
 
 
 
 
 
-function App() {
+
+
+export default function App() {
   return (
-    <div>
+    <div className="app">
+      <Header />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+        <div className="list">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/checkout">Checkout</Link></li>
+          </ul>
+        </div>
+      </Router >
     </div>
   );
-}
+};
 
-export default App;
+
+
+
+

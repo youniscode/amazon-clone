@@ -4,7 +4,8 @@ import Product from "./Product";
 
 
 
-function Home() {
+
+export default function Home() {
   return (
     <div className="home">
       <div className="home__container">
@@ -58,7 +59,7 @@ function Home() {
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default Home;
+

@@ -2,14 +2,19 @@ import React from 'react';
 import './Header.css';
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+// import { Link } from "react-router-dom";
 
 
 
-function Header() {
+
+export default function Header() {
   return (
     <div className="header">
-      {/*AMAZON LOGO*/}
-      <img className="header__logo" src="https://www.sahirkarani.com/images/amazon.png" alt="logo_amazon" />
+      
+        <img className="header__logo" src="https://www.sahirkarani.com/images/amazon.png" alt="logo_amazon" />
+      
+
+
 
       {/*SEARCH BAR*/}
       <div className="header__search">
@@ -42,9 +47,9 @@ function Header() {
 
 
       </div>
-    </div>
+    </div >
 
-  )
-}
+  );
+};
 
-export default Header
+
