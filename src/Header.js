@@ -2,17 +2,21 @@ import React from 'react';
 import './Header.css';
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-// import { Link } from "react-router-dom";
+
+
+
 
 
 
 
 export default function Header() {
+
   return (
     <div className="header">
-      
-        <img className="header__logo" src="https://www.sahirkarani.com/images/amazon.png" alt="logo_amazon" />
-      
+
+      <a href="/">
+        <img className="header__logo" src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo_amazon" />
+      </a>
 
 
 
@@ -38,15 +42,14 @@ export default function Header() {
           <span className="header__optionLineOn">Your</span>
           <span className="header__optionLineTw">Prime</span>
         </div>
-
-        <div className="header__optionBasket">
-          <ShoppingBasketIcon />
-          <span className="header__optionLineTwo header__optionCount">0</span>
-        </div>
-
-
-
+        <a href="/checkout">
+          <div className="header__optionBasket">
+            <ShoppingBasketIcon />
+            <span className="header__optionLineTwo header__optionCount">0</span>
+          </div>
+        </a>
       </div>
+
     </div >
 
   );
